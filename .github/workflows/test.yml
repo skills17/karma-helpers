@@ -9,14 +9,19 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: .devcontainer
 
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js 14
-      uses: actions/setup-node@v1
-      with:
-        node-version: 14
+    - name: Start containers
+      run: docker-compose up -d
+    - name: Change permissions
+      run: docker-compose exec -T app chown -R node:node /workspaces/karma-helpers
     - name: Install dependencies
-      run: npm ci
+      run: docker-compose exec -T --workdir /workspaces/karma-helpers --user node app npm ci
+    - name: Build library
+      run: docker-compose exec -T --workdir /workspaces/karma-helpers --user node app npm run build
     - name: Test
-      run: npm test
+      run: docker-compose exec -T --workdir /workspaces/karma-helpers --user node app npm test
