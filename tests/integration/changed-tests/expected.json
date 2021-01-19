@@ -1,0 +1,38 @@
+{
+  "testResults": [
+    {
+      "group": "Some.+",
+      "points": 1,
+      "maxPoints": 1,
+      "strategy": "add",
+      "manualCheck": false,
+      "tests": [
+        {
+          "name": "Some > works",
+          "points": 1,
+          "maxPoints": 1,
+          "successful": true,
+          "required": false,
+          "manualCheck": false
+        }
+      ]
+    },
+    {
+      "group": "Other.+",
+      "points": 1,
+      "maxPoints": 1,
+      "strategy": "add",
+      "manualCheck": false,
+      "tests": [
+        {
+          "name": "Other > works",
+          "points": 1,
+          "maxPoints": 1,
+          "successful": true,
+          "required": false,
+          "manualCheck": false
+        }
+      ]
+    }
+  ]
+}

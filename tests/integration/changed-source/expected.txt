@@ -1,0 +1,7 @@
+------------       RESULT       ------------
+
+Summary:
+  Assets.+: 1/1 point
+    ✔ Assets > works: ok
+  Other.+: 1/1 point
+    ✔ Other > works: ok

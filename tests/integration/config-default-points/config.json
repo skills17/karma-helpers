@@ -1,0 +1,34 @@
+{
+  "source": [],
+  "points": {
+    "defaultPoints": 3
+  },
+  "groups": [
+    {
+      "match": "A.+"
+    },
+    {
+      "match": "B.+",
+      "defaultPoints": 0.5
+    },
+    {
+      "match": "C.+",
+      "tests": [
+        {
+          "match": "C > LessPoints",
+          "points": 2
+        }
+      ]
+    },
+    {
+      "match": "D.+",
+      "defaultPoints": 1,
+      "tests": [
+        {
+          "match": "D > MorePoints",
+          "points": 2
+        }
+      ]
+    }
+  ]
+}

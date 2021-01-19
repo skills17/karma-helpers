@@ -1,0 +1,7 @@
+------------       RESULT       ------------
+
+Summary:
+  Some.+: 1/1 point
+    ✔ Some > works: ok
+  Other.+: 1/1 point
+    ✔ Other > works: ok

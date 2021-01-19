@@ -1,0 +1,34 @@
+{
+  "source": [],
+  "groups": [
+    {
+      "match": "A.+",
+      "tests": [
+        {
+          "match": "A > Required",
+          "required": true
+        }
+      ]
+    },
+    {
+      "match": "B.+",
+      "strategy": "deduct",
+      "maxPoints": 2,
+      "tests": [
+        {
+          "match": "B > Required",
+          "required": true
+        }
+      ]
+    },
+    {
+      "match": "C.+",
+      "tests": [
+        {
+          "match": "C > Required",
+          "required": true
+        }
+      ]
+    }
+  ]
+}

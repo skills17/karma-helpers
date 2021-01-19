@@ -1,0 +1,41 @@
+{
+  "testResults": [
+    {
+      "group": "A.+",
+      "points": 1,
+      "maxPoints": 1,
+      "strategy": "add",
+      "manualCheck": false,
+      "tests": [
+        {
+          "name": "A > Foo",
+          "points": 1,
+          "maxPoints": 1,
+          "successful": true,
+          "required": false,
+          "manualCheck": false
+        }
+      ]
+    },
+    {
+      "group": "C.+",
+      "points": 1,
+      "maxPoints": 1,
+      "strategy": "add",
+      "manualCheck": false,
+      "tests": [
+        {
+          "name": "C > Foo",
+          "points": 1,
+          "maxPoints": 1,
+          "successful": true,
+          "required": false,
+          "manualCheck": false
+        }
+      ]
+    }
+  ],
+  "warnings": [
+    "The following groups do not have any test:\n  - B.+"
+  ]
+}

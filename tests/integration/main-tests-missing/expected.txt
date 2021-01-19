@@ -1,0 +1,21 @@
+------------       RESULT       ------------
+
+Summary:
+  A.+: 1/1 point
+    ✔ A > Foo: ok
+  B.+: 2/3 points
+    ✔ B > Foo: ok
+    ✔ B > Bar: ok
+    ✖ B > Baz: failed
+  C.+: 1/1 point
+    ✔ C > Foo: ok
+  D.+: 0/1 point
+    ✖ D > Foo: failed
+  E.+: 1/2 points
+    ✔ E > Foo: ok
+    ✖ E > Bar: failed
+
+WARNING: The following extra tests do not belong to a main test and were ignored:
+  - C.+ > C > Bar
+  - F.+ > F > Foo
+  - F.+ > F > Bar

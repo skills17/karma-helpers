@@ -1,0 +1,95 @@
+{
+  "testResults": [
+    {
+      "group": "A.+",
+      "points": 0,
+      "maxPoints": 3,
+      "strategy": "add",
+      "manualCheck": false,
+      "tests": [
+        {
+          "name": "A > Foo",
+          "points": 1,
+          "maxPoints": 1,
+          "successful": true,
+          "required": false,
+          "manualCheck": false
+        },
+        {
+          "name": "A > Bar",
+          "points": 0,
+          "maxPoints": 1,
+          "successful": false,
+          "required": false,
+          "manualCheck": false
+        },
+        {
+          "name": "A > Required",
+          "points": 0,
+          "maxPoints": 1,
+          "successful": false,
+          "required": true,
+          "manualCheck": false
+        }
+      ]
+    },
+    {
+      "group": "B.+",
+      "points": 0,
+      "maxPoints": 2,
+      "strategy": "deduct",
+      "manualCheck": false,
+      "tests": [
+        {
+          "name": "B > Foo",
+          "points": 1,
+          "maxPoints": 1,
+          "successful": true,
+          "required": false,
+          "manualCheck": false
+        },
+        {
+          "name": "B > Bar",
+          "points": 1,
+          "maxPoints": 1,
+          "successful": true,
+          "required": false,
+          "manualCheck": false
+        },
+        {
+          "name": "B > Required",
+          "points": 0,
+          "maxPoints": 1,
+          "successful": false,
+          "required": true,
+          "manualCheck": false
+        }
+      ]
+    },
+    {
+      "group": "C.+",
+      "points": 2,
+      "maxPoints": 2,
+      "strategy": "add",
+      "manualCheck": false,
+      "tests": [
+        {
+          "name": "C > Foo",
+          "points": 1,
+          "maxPoints": 1,
+          "successful": true,
+          "required": false,
+          "manualCheck": false
+        },
+        {
+          "name": "C > Required",
+          "points": 1,
+          "maxPoints": 1,
+          "successful": true,
+          "required": true,
+          "manualCheck": false
+        }
+      ]
+    }
+  ]
+}

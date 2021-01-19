@@ -1,0 +1,55 @@
+{
+  "testResults": [
+    {
+      "group": "A.+",
+      "points": 1,
+      "maxPoints": 1,
+      "strategy": "add",
+      "manualCheck": false,
+      "tests": [
+        {
+          "name": "A > Foo",
+          "points": 1,
+          "maxPoints": 1,
+          "successful": true,
+          "required": false,
+          "manualCheck": false
+        }
+      ]
+    },
+    {
+      "group": "BGroup::foo",
+      "points": 1,
+      "maxPoints": 1,
+      "strategy": "add",
+      "manualCheck": false,
+      "tests": [
+        {
+          "name": "B > Foo",
+          "points": 1,
+          "maxPoints": 1,
+          "successful": true,
+          "required": false,
+          "manualCheck": false
+        }
+      ]
+    },
+    {
+      "group": "Last group",
+      "points": 1,
+      "maxPoints": 1,
+      "strategy": "add",
+      "manualCheck": false,
+      "tests": [
+        {
+          "name": "C > Foo",
+          "points": 1,
+          "maxPoints": 1,
+          "successful": true,
+          "required": false,
+          "manualCheck": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "tests": [
+    "./some-tests/**/*.js",
+    "./other-tests/**/*.js"
+  ],
+  "groups": [
+    {
+      "match": "Some.+"
+    },
+    {
+      "match": "Other.+"
+    }
+  ]
+}

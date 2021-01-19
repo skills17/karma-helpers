@@ -1,0 +1,202 @@
+{
+  "testResults": [
+    {
+      "group": "A.+",
+      "points": 2,
+      "maxPoints": 3,
+      "strategy": "deduct",
+      "manualCheck": false,
+      "tests": [
+        {
+          "name": "A > Foo",
+          "points": 1,
+          "maxPoints": 1,
+          "successful": true,
+          "required": false,
+          "manualCheck": false
+        },
+        {
+          "name": "A > Bar",
+          "points": 0,
+          "maxPoints": 1,
+          "successful": false,
+          "required": false,
+          "manualCheck": false
+        },
+        {
+          "name": "A > Baz",
+          "points": 1,
+          "maxPoints": 1,
+          "successful": true,
+          "required": false,
+          "manualCheck": false
+        }
+      ]
+    },
+    {
+      "group": "B.+",
+      "points": 1,
+      "maxPoints": 2,
+      "strategy": "deduct",
+      "manualCheck": false,
+      "tests": [
+        {
+          "name": "B > Foo",
+          "points": 1,
+          "maxPoints": 1,
+          "successful": true,
+          "required": false,
+          "manualCheck": false
+        },
+        {
+          "name": "B > Bar",
+          "points": 0,
+          "maxPoints": 1,
+          "successful": false,
+          "required": false,
+          "manualCheck": false
+        },
+        {
+          "name": "B > Baz",
+          "points": 1,
+          "maxPoints": 1,
+          "successful": true,
+          "required": false,
+          "manualCheck": false
+        }
+      ]
+    },
+    {
+      "group": "C.+",
+      "points": 0,
+      "maxPoints": 2,
+      "strategy": "deduct",
+      "manualCheck": false,
+      "tests": [
+        {
+          "name": "C > Foo",
+          "points": 0,
+          "maxPoints": 1,
+          "successful": false,
+          "required": false,
+          "manualCheck": false
+        },
+        {
+          "name": "C > Bar",
+          "points": 0,
+          "maxPoints": 1,
+          "successful": false,
+          "required": false,
+          "manualCheck": false
+        },
+        {
+          "name": "C > Baz",
+          "points": 0,
+          "maxPoints": 1,
+          "successful": false,
+          "required": false,
+          "manualCheck": false
+        }
+      ]
+    },
+    {
+      "group": "D.+",
+      "points": 1,
+      "maxPoints": 1.5,
+      "strategy": "deduct",
+      "manualCheck": false,
+      "tests": [
+        {
+          "name": "D > Foo",
+          "points": 0.5,
+          "maxPoints": 0.5,
+          "successful": true,
+          "required": false,
+          "manualCheck": false
+        },
+        {
+          "name": "D > Bar",
+          "points": 0,
+          "maxPoints": 0.5,
+          "successful": false,
+          "required": false,
+          "manualCheck": false
+        },
+        {
+          "name": "D > Baz",
+          "points": 0.5,
+          "maxPoints": 0.5,
+          "successful": true,
+          "required": false,
+          "manualCheck": false
+        }
+      ]
+    },
+    {
+      "group": "E.+",
+      "points": 0.5,
+      "maxPoints": 2,
+      "strategy": "deduct",
+      "manualCheck": false,
+      "tests": [
+        {
+          "name": "E > Foo",
+          "points": 0.5,
+          "maxPoints": 0.5,
+          "successful": true,
+          "required": false,
+          "manualCheck": false
+        },
+        {
+          "name": "E > MorePoints",
+          "points": 0,
+          "maxPoints": 1,
+          "successful": false,
+          "required": false,
+          "manualCheck": false
+        },
+        {
+          "name": "E > Bar",
+          "points": 0,
+          "maxPoints": 0.5,
+          "successful": false,
+          "required": false,
+          "manualCheck": false
+        },
+        {
+          "name": "E > Baz",
+          "points": 0.5,
+          "maxPoints": 0.5,
+          "successful": true,
+          "required": false,
+          "manualCheck": false
+        }
+      ]
+    },
+    {
+      "group": "F.+",
+      "points": 2,
+      "maxPoints": 2,
+      "strategy": "deduct",
+      "manualCheck": false,
+      "tests": [
+        {
+          "name": "F > Foo",
+          "points": 1,
+          "maxPoints": 1,
+          "successful": true,
+          "required": false,
+          "manualCheck": false
+        },
+        {
+          "name": "F > Bar",
+          "points": 1,
+          "maxPoints": 1,
+          "successful": true,
+          "required": false,
+          "manualCheck": false
+        }
+      ]
+    }
+  ]
+}

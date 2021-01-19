@@ -1,0 +1,37 @@
+{
+  "source": [],
+  "points": {
+    "strategy": "deduct"
+  },
+  "groups": [
+    {
+      "match": "A.+"
+    },
+    {
+      "match": "B.+",
+      "maxPoints": 2
+    },
+    {
+      "match": "C.+",
+      "maxPoints": 2
+    },
+    {
+      "match": "D.+",
+      "defaultPoints": 0.5
+    },
+    {
+      "match": "E.+",
+      "defaultPoints": 0.5,
+      "maxPoints": 2,
+      "tests": [
+        {
+          "match": "E > MorePoints",
+          "points": 1
+        }
+      ]
+    },
+    {
+      "match": "F.+"
+    }
+  ]
+}

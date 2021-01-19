@@ -1,0 +1,38 @@
+{
+  "testResults": [
+    {
+      "group": "A > B.+",
+      "points": 1,
+      "maxPoints": 1,
+      "strategy": "add",
+      "manualCheck": false,
+      "tests": [
+        {
+          "name": "A > B > Foo",
+          "points": 1,
+          "maxPoints": 1,
+          "successful": true,
+          "required": false,
+          "manualCheck": false
+        }
+      ]
+    },
+    {
+      "group": ".+D.+",
+      "points": 1,
+      "maxPoints": 1,
+      "strategy": "add",
+      "manualCheck": false,
+      "tests": [
+        {
+          "name": "C > D > Foo",
+          "points": 1,
+          "maxPoints": 1,
+          "successful": true,
+          "required": false,
+          "manualCheck": false
+        }
+      ]
+    }
+  ]
+}

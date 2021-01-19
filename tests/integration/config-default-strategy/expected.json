@@ -1,0 +1,70 @@
+{
+  "testResults": [
+    {
+      "group": "A.+",
+      "points": 1,
+      "maxPoints": 2,
+      "strategy": "deduct",
+      "manualCheck": false,
+      "tests": [
+        {
+          "name": "A > Foo",
+          "points": 1,
+          "maxPoints": 1,
+          "successful": true,
+          "required": false,
+          "manualCheck": false
+        },
+        {
+          "name": "A > Bar",
+          "points": 1,
+          "maxPoints": 1,
+          "successful": true,
+          "required": false,
+          "manualCheck": false
+        },
+        {
+          "name": "A > Baz",
+          "points": 0,
+          "maxPoints": 1,
+          "successful": false,
+          "required": false,
+          "manualCheck": false
+        }
+      ]
+    },
+    {
+      "group": "B.+",
+      "points": 2,
+      "maxPoints": 3,
+      "strategy": "add",
+      "manualCheck": false,
+      "tests": [
+        {
+          "name": "B > Foo",
+          "points": 1,
+          "maxPoints": 1,
+          "successful": true,
+          "required": false,
+          "manualCheck": false
+        },
+        {
+          "name": "B > Bar",
+          "points": 1,
+          "maxPoints": 1,
+          "successful": true,
+          "required": false,
+          "manualCheck": false
+        },
+        {
+          "name": "B > Baz",
+          "points": 0,
+          "maxPoints": 1,
+          "successful": false,
+          "required": false,
+          "manualCheck": false
+        }
+      ]
+    }
+  ]
+}

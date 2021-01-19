@@ -1,0 +1,16 @@
+{
+  "source": [],
+  "points": {
+    "strategy": "deduct"
+  },
+  "groups": [
+    {
+      "match": "A.+",
+      "maxPoints": 2
+    },
+    {
+      "match": "B.+",
+      "strategy": "add"
+    }
+  ]
+}

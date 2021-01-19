@@ -1,0 +1,14 @@
+------------       RESULT       ------------
+
+Summary:
+  A.+: 0/3 points
+    ✔ A > Foo: ok
+    ✖ A > Bar: failed
+    ✖ A > Required: failed
+  B.+: 0/2 points
+    ✔ B > Foo: ok
+    ✔ B > Bar: ok
+    ✖ B > Required: failed
+  C.+: 2/2 points
+    ✔ C > Foo: ok
+    ✔ C > Required: ok

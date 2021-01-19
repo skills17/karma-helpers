@@ -1,0 +1,17 @@
+------------       RESULT       ------------
+
+Summary:
+  A.+: 1/1 point
+    ✔ A > Foo: ok
+  B.+: 2/3 points
+    ✔ B > Foo: ok
+    ✔ B > Bar: ok
+    ✖ B > Baz: failed
+  C.+: 2/2 points
+    ✔ C > Foo: ok
+    ✔ C > Bar: ok
+  D.+: 1/1 point [manual check required]
+    ? D > Foo: WARNING: please check manually for static return values and/or logical errors
+  E.+: 2/2 points [manual check required]
+    ? E > Foo: WARNING: please check manually for static return values and/or logical errors
+    ✔ E > Bar: ok

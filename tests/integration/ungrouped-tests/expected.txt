@@ -1,0 +1,9 @@
+------------       RESULT       ------------
+
+Summary:
+  A.+: 1/1 point
+    ✔ A > Foo: ok
+
+WARNING: The following tests do not belong to a group and were ignored:
+  - B > Foo
+  - B > Bar

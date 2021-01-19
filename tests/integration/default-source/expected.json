@@ -1,0 +1,21 @@
+{
+  "testResults": [
+    {
+      "group": "Hello.+",
+      "points": 1,
+      "maxPoints": 1,
+      "strategy": "add",
+      "manualCheck": false,
+      "tests": [
+        {
+          "name": "Hello > World",
+          "points": 1,
+          "maxPoints": 1,
+          "successful": true,
+          "required": false,
+          "manualCheck": false
+        }
+      ]
+    }
+  ]
+}

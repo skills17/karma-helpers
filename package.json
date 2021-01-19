@@ -49,7 +49,7 @@
     "typescript": "^4.1.3"
   },
   "dependencies": {
-    "@skills17/task-config": "^1.3.3",
+    "@skills17/task-config": "^1.3.4",
     "@skills17/test-result-printer": "^1.0.3"
   },
   "peerDependencies": {

@@ -1,0 +1,17 @@
+------------       RESULT       ------------
+
+Summary:
+  A.+: 1/1 point
+    ✔ A > Foo: ok
+  B.+: 2/3 points
+    ✔ B > Foo: ok
+    ✔ B > Bar: ok
+    ✖ B > Baz: failed
+  C.+: 2/2 points
+    ✔ C > Foo: ok
+    ✔ C > Bar: ok
+  D.+: 0/1 point
+    ✖ D > Foo: failed
+  E.+: 0/2 points
+    ✖ E > Foo: failed
+    ✖ E > Bar: failed

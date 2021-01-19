@@ -1,0 +1,149 @@
+{
+  "testResults": [
+    {
+      "group": "A.+",
+      "points": 1,
+      "maxPoints": 1,
+      "strategy": "add",
+      "manualCheck": false,
+      "tests": [
+        {
+          "name": "A > Foo",
+          "points": 1,
+          "maxPoints": 1,
+          "successful": true,
+          "required": false,
+          "manualCheck": false
+        }
+      ]
+    },
+    {
+      "group": "B.+",
+      "points": 2,
+      "maxPoints": 3,
+      "strategy": "add",
+      "manualCheck": false,
+      "tests": [
+        {
+          "name": "B > Foo",
+          "points": 1,
+          "maxPoints": 1,
+          "successful": true,
+          "required": false,
+          "manualCheck": false
+        },
+        {
+          "name": "B > Bar",
+          "points": 1,
+          "maxPoints": 1,
+          "successful": true,
+          "required": false,
+          "manualCheck": false
+        },
+        {
+          "name": "B > Baz",
+          "points": 0,
+          "maxPoints": 1,
+          "successful": false,
+          "required": false,
+          "manualCheck": false
+        }
+      ]
+    },
+    {
+      "group": "C.+",
+      "points": 2,
+      "maxPoints": 2,
+      "strategy": "add",
+      "manualCheck": false,
+      "tests": [
+        {
+          "name": "C > Foo",
+          "points": 1,
+          "maxPoints": 1,
+          "successful": true,
+          "required": false,
+          "manualCheck": false
+        },
+        {
+          "name": "C > Bar",
+          "points": 1,
+          "maxPoints": 1,
+          "successful": true,
+          "required": false,
+          "manualCheck": false
+        }
+      ]
+    },
+    {
+      "group": "D.+",
+      "points": 0,
+      "maxPoints": 1,
+      "strategy": "add",
+      "manualCheck": false,
+      "tests": [
+        {
+          "name": "D > Foo",
+          "points": 0,
+          "maxPoints": 1,
+          "successful": false,
+          "required": false,
+          "manualCheck": false
+        }
+      ]
+    },
+    {
+      "group": "E.+",
+      "points": 1,
+      "maxPoints": 2,
+      "strategy": "add",
+      "manualCheck": false,
+      "tests": [
+        {
+          "name": "E > Foo",
+          "points": 1,
+          "maxPoints": 1,
+          "successful": true,
+          "required": false,
+          "manualCheck": false
+        },
+        {
+          "name": "E > Bar",
+          "points": 0,
+          "maxPoints": 1,
+          "successful": false,
+          "required": false,
+          "manualCheck": false
+        }
+      ]
+    },
+    {
+      "group": "F.+",
+      "points": 1,
+      "maxPoints": 2,
+      "strategy": "add",
+      "manualCheck": false,
+      "tests": [
+        {
+          "name": "F > Foo",
+          "points": 1,
+          "maxPoints": 1,
+          "successful": true,
+          "required": false,
+          "manualCheck": false
+        },
+        {
+          "name": "F > Bar",
+          "points": 0,
+          "maxPoints": 1,
+          "successful": false,
+          "required": false,
+          "manualCheck": false
+        }
+      ]
+    }
+  ],
+  "warnings": [
+    "The following tests do NOT have extra tests and so can NOT be checked for possible cheating:\n  - E.+ > E > Foo\n  - F.+ > F > Foo\n  - F.+ > F > Bar"
+  ]
+}

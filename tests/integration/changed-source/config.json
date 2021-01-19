@@ -1,0 +1,14 @@
+{
+  "source": [
+    "./assets/**/*.js",
+    "./other/**/*.js"
+  ],
+  "groups": [
+    {
+      "match": "Assets.+"
+    },
+    {
+      "match": "Other.+"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+------------       RESULT       ------------
+
+Summary:
+  A.+: 6/9 points
+    ✔ A > Foo: ok
+    ✔ A > Bar: ok
+    ✖ A > Baz: failed
+  B.+: 1/1.5 points
+    ✔ B > Foo: ok
+    ✔ B > Bar: ok
+    ✖ B > Baz: failed
+  C.+: 5/8 points
+    ✔ C > Foo: ok
+    ✔ C > LessPoints: ok
+    ✖ C > Baz: failed
+  D.+: 3/4 points
+    ✔ D > Foo: ok
+    ✔ D > MorePoints: ok
+    ✖ D > Baz: failed
