@@ -1,6 +1,6 @@
 {
   "name": "@skills17/karma-helpers",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Provides some karma helpers for usage in a skills competition environment.",
   "main": "lib/index.js",
   "scripts": {
