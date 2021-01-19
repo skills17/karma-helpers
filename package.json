@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Provides some karma helpers for usage in a skills competition environment.",
   "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "build": "npm run build:js && npm run build:types",
     "build:js": "babel src --out-dir lib --delete-dir-on-start --extensions \".ts\"",
