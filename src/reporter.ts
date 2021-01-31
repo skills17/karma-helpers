@@ -22,6 +22,7 @@ const Reporter = (json: boolean) => {
     task.loadFromFileSync();
 
     const testRun: Record<string, TestRun> = {};
+    const errors: Record<string, boolean> = {};
 
     // create a new test run for each browser
     this.onBrowserStart = function onBrowserStart(browser) {
@@ -44,12 +45,14 @@ const Reporter = (json: boolean) => {
             `An unexpected error has occurred and tests cannot be executed.\n${formatError(error)}`,
           );
       }
+
+      errors[browser.id] = true;
     };
 
     // print result when all tests have been executed
     this.onBrowserComplete = function onBrowserComplete(browser) {
       // if a browser error occurs, no test run will be created
-      if (!testRun[browser.id]) {
+      if (!testRun[browser.id] || errors[browser.id]) {
         return;
       }
 

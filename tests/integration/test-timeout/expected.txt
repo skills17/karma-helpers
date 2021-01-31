@@ -1,0 +1,7 @@
+------------       RESULT       ------------
+
+Summary:
+  A.+: 1/1 point
+    ✔ A > Foo: ok
+  Timeout.+: 0/1 point
+    ✖ Timeout > Foo: failed

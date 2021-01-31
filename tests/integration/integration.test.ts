@@ -29,11 +29,11 @@ const executeKarma = (
 };
 
 const standardizeOutput = (output: string) =>
-  // remove log prefix with date & time
+  // remove log prefix with date & time and browser version
   stripAnsi(output)
     .trim()
     .replace(
-      /^((\d{2}\s){2})\d{4}\s(\d{2}:){2}\d{2}\.\d{0,3}:(?<level>DEBUG|INFO|WARN|WARNING|ERROR)/gm,
+      /^((\d{2}\s){2})\d{4}\s(\d{2}:){2}\d{2}\.\d{0,3}:(?<level>DEBUG|INFO|WARN|WARNING|ERROR)\s\[[^\]]*\]/gm,
       '$<level>',
     );
 
@@ -76,7 +76,7 @@ describe('integration tests', () => {
       // read expected output
       const expectedOutput = fs.readFileSync(path.resolve(__dirname, test, 'expected.json'));
 
-      expect(output.trim()).toEqual(expectedOutput.toString().trim());
+      expect(standardizeOutput(output)).toEqual(standardizeOutput(expectedOutput.toString()));
     },
     60000,
   );

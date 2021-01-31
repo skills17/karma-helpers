@@ -1,0 +1,13 @@
+{
+  "source": [
+    "./src/**/*.js"
+  ],
+  "groups": [
+    {
+      "match": "A.+"
+    },
+    {
+      "match": "Timeout.+"
+    }
+  ]
+}
