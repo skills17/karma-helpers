@@ -1,3 +1,27 @@
+
+FAILED TESTS:
+
+  B > Baz
+    AssertionError: expected true to equal false
+        at Context.<anonymous> (tests/b.test.js:13:21)
+    
+  D > Foo
+    AssertionError: expected true to equal false
+        at Context.<anonymous> (tests/d.test.js:5:21)
+    
+  E > Foo
+    AssertionError: expected true to equal false
+        at Context.<anonymous> (tests/e.test.js:5:21)
+    
+  E > Bar
+    AssertionError: expected true to equal false
+        at Context.<anonymous> (tests/e.test.js:9:21)
+    
+  extra > B > Baz
+    AssertionError: expected true to equal false
+        at Context.<anonymous> (tests/extra/b.test.js:14:23)
+    
+
 ------------       RESULT       ------------
 
 Summary:
@@ -15,3 +39,6 @@ Summary:
   E.+: 0/2 points
     ✖ E > Foo: failed
     ✖ E > Bar: failed
+
+Info: The detailed test and error information is visible above the result summary.
+

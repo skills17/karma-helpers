@@ -1,3 +1,10 @@
+
+FAILED TESTS:
+
+  Timeout > Foo
+    Error: Timeout of 2000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves.
+    
+
 ------------       RESULT       ------------
 
 Summary:
@@ -5,3 +12,6 @@ Summary:
     ✔ A > Foo: ok
   Timeout.+: 0/1 point
     ✖ Timeout > Foo: failed
+
+Info: The detailed test and error information is visible above the result summary.
+
