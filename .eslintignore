@@ -1,1 +1,2 @@
 **/karma.conf.js
+/tests/integration/syntax-error/src/hello.js

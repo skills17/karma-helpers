@@ -1,0 +1,3 @@
+{
+  "error": "Uncaught SyntaxError: Invalid or unexpected token\nat src/hello.js:4:10\n\nSyntaxError: Invalid or unexpected token\n"
+}

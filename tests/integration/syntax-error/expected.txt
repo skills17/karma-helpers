@@ -1,0 +1,5 @@
+31 01 2021 11:12:48.477:ERROR [skills17]: An unexpected error has occurred and tests cannot be executed.
+Uncaught SyntaxError: Invalid or unexpected token
+at src/hello.js:4:10
+
+SyntaxError: Invalid or unexpected token

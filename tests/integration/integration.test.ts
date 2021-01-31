@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { exec } from 'child_process';
+import stripAnsi from 'strip-ansi';
 
 const executeKarma = (
   testName: string,
@@ -27,6 +28,15 @@ const executeKarma = (
   });
 };
 
+const standardizeOutput = (output: string) =>
+  // remove log prefix with date & time
+  stripAnsi(output)
+    .trim()
+    .replace(
+      /^((\d{2}\s){2})\d{4}\s(\d{2}:){2}\d{2}\.\d{0,3}:(?<level>DEBUG|INFO|WARN|WARNING|ERROR)/gm,
+      '$<level>',
+    );
+
 describe('integration tests', () => {
   // get all integration tests
   const integrationTests = fs.readdirSync(__dirname).filter((file) => {
@@ -47,8 +57,7 @@ describe('integration tests', () => {
 
       // read expected output
       const expectedOutput = fs.readFileSync(path.resolve(__dirname, test, 'expected.txt'));
-
-      expect(output.trim()).toEqual(expectedOutput.toString().trim());
+      expect(standardizeOutput(output)).toEqual(standardizeOutput(expectedOutput.toString()));
     },
     60000,
   );
