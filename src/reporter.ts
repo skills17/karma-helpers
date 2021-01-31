@@ -1,3 +1,4 @@
+import util from 'util';
 import chalk from 'chalk';
 import TaskConfig from '@skills17/task-config';
 import { TestRun } from '@skills17/test-result';
@@ -67,6 +68,7 @@ const Reporter = (json: boolean) => {
     const testRun: Record<string, TestRun> = {};
     const errors: Record<string, boolean> = {};
     const testFailures: Record<string, KarmaResult[]> = {};
+    const logs: Record<string, string[]> = {};
 
     // create a new test run for each browser
     this.onBrowserStart = function onBrowserStart(browser) {
@@ -77,6 +79,7 @@ const Reporter = (json: boolean) => {
     this.onSpecComplete = function onSpecComplete(browser: Browser, result: KarmaResult) {
       testRun[browser.id].recordTest(concatTestName(result), isExtraTest(result), result.success);
 
+      // display error messages
       if (!result.success) {
         if (!testFailures[browser.id]) {
           testFailures[browser.id] = [];
@@ -84,6 +87,15 @@ const Reporter = (json: boolean) => {
 
         testFailures[browser.id].push(result);
       }
+
+      // display console logs
+      if (logs[browser.id] && logs[browser.id].length > 0 && !json) {
+        console.error();
+        console.error(concatTestName(result, true));
+        logs[browser.id].forEach((log) => console.error(`  ${log.split('\n').join('\n  ')}`));
+      }
+
+      delete logs[browser.id];
     };
 
     // handle browser errors that do not allow execution of further tests
@@ -99,6 +111,16 @@ const Reporter = (json: boolean) => {
       }
 
       errors[browser.id] = true;
+    };
+
+    // forward console.log statements
+    this.onBrowserLog = (browser, log, type) => {
+      if (!logs[browser.id]) {
+        logs[browser.id] = [];
+      }
+
+      const message = typeof log === 'string' ? log : util.inspect(log, false, undefined, true);
+      logs[browser.id].push(`console.${type.toLowerCase()}: ${message}`);
     };
 
     // print result when all tests have been executed

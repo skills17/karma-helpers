@@ -1,0 +1,24 @@
+
+A > Foo
+  console.log: 'inside hello()'
+
+A > Bar
+  console.error: 'error inside hello()
+  second line'
+
+FAILED TESTS:
+
+  A > Bar
+    AssertionError: expected 'world' to not equal 'world'
+        at Context.<anonymous> (tests/a.test.js:9:35)
+    
+
+------------       RESULT       ------------
+
+Summary:
+  A.+: 1/2 points
+    ✔ A > Foo: ok
+    ✖ A > Bar: failed
+
+Info: The detailed test and error information is visible above the result summary.
+
