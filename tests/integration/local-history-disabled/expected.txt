@@ -1,0 +1,24 @@
+
+FAILED TESTS:
+
+  A > Bar
+    AssertionError: expected true to equal false
+        at Context.<anonymous> (tests/a.test.js:9:21)
+
+  B > Bar
+    AssertionError: expected true to equal false
+        at Context.<anonymous> (tests/b.test.js:9:21)
+
+
+------------       RESULT       ------------
+
+Summary:
+  A.+: 1/2 points
+    ✔ Foo
+    ✖ Bar
+  B.+: 1/2 points
+    ✔ Foo
+    ✖ Bar
+
+Info: The detailed test and error information is visible above the result summary.
+

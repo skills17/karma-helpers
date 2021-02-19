@@ -1,0 +1,12 @@
+{
+  "source": [],
+  "localHistory": true,
+  "groups": [
+    {
+      "match": "A.+"
+    },
+    {
+      "match": "B.+"
+    }
+  ]
+}

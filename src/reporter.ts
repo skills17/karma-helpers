@@ -1,5 +1,8 @@
+import path from 'path';
+import fs from 'fs';
 import util from 'util';
 import chalk from 'chalk';
+import uniqid from 'uniqid';
 import TaskConfig from '@skills17/task-config';
 import { TestRun } from '@skills17/test-result';
 import Printer from '@skills17/test-result-printer';
@@ -34,6 +37,7 @@ const isExtraTest = (result: KarmaResult) =>
 
 /**
  * Print test failures with specific error messages
+ *
  * @param results Test results
  */
 const printTestFailures = (formatError: any, results?: KarmaResult[]) => {
@@ -56,14 +60,40 @@ const printTestFailures = (formatError: any, results?: KarmaResult[]) => {
 };
 
 /**
+ * Stores a test run in the local history
+ *
+ * @param config Task config
+ * @param testRun Test run
+ */
+const storeTestRun = (config: TaskConfig, testRun: TestRun): void => {
+  const historyDir = path.resolve(config.getProjectRoot(), '.history');
+  const historyFile = path.resolve(historyDir, `${uniqid()}.json`);
+
+  // create history dir if it doesn't exist
+  if (!fs.existsSync(historyDir)) {
+    fs.mkdirSync(historyDir);
+  }
+
+  // write history file
+  fs.writeFileSync(
+    historyFile,
+    JSON.stringify(
+      { time: Math.round(new Date().getTime() / 1000), ...testRun.toJSON() },
+      undefined,
+      2,
+    ),
+  );
+};
+
+/**
  * Create a new reporter
  *
  * @param json Whether the output should be in JSON
  */
 const Reporter = (json: boolean) => {
   const reporter = function Skills17Reporter(this: CustomReporter, logger: any, formatError: any) {
-    const task = new TaskConfig();
-    task.loadFromFileSync();
+    const config = new TaskConfig();
+    config.loadFromFileSync();
 
     const testRun: Record<string, TestRun> = {};
     const errors: Record<string, boolean> = {};
@@ -71,7 +101,7 @@ const Reporter = (json: boolean) => {
 
     // create a new test run for each browser
     this.onBrowserStart = function onBrowserStart(browser) {
-      testRun[browser.id] = task.createTestRun();
+      testRun[browser.id] = config.createTestRun();
     };
 
     // save single test result
@@ -131,6 +161,10 @@ const Reporter = (json: boolean) => {
 
         const printer = new Printer(testRun[browser.id]);
         printer.print();
+      }
+
+      if (config.isLocalHistoryEnabled()) {
+        storeTestRun(config, testRun[browser.id]);
       }
     };
   };
