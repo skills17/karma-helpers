@@ -4,67 +4,67 @@ FAILED TESTS:
   A > Bar
     AssertionError: expected true to equal false
         at Context.<anonymous> (tests/a.test.js:13:21)
-    
+
   B > Bar
     AssertionError: expected true to equal false
         at Context.<anonymous> (tests/b.test.js:13:21)
-    
+
   C > Foo
     AssertionError: expected true to equal false
         at Context.<anonymous> (tests/c.test.js:9:21)
-    
+
   C > Bar
     AssertionError: expected true to equal false
         at Context.<anonymous> (tests/c.test.js:13:21)
-    
+
   C > Baz
     AssertionError: expected true to equal false
         at Context.<anonymous> (tests/c.test.js:17:21)
-    
+
   D > Bar
     AssertionError: expected true to equal false
         at Context.<anonymous> (tests/d.test.js:13:21)
-    
+
   E > MorePoints
     AssertionError: expected true to equal false
         at Context.<anonymous> (tests/e.test.js:9:21)
-    
+
   E > Bar
     AssertionError: expected true to equal false
         at Context.<anonymous> (tests/e.test.js:13:21)
-    
+
   extra > B > Baz
     AssertionError: expected true to equal false
         at Context.<anonymous> (tests/extra/b.test.js:14:23)
-    
+
 
 ------------       RESULT       ------------
 
 Summary:
   A.+: 2/3 points
-    ✔ A > Foo: ok
-    ✖ A > Bar: failed
-    ✔ A > Baz: ok
+    ✔ Foo
+    ✖ Bar
+    ✔ Baz
   B.+: 1/2 points [manual check required]
-    ✔ B > Foo: ok
-    ✖ B > Bar: failed
-    ? B > Baz: WARNING: please check manually for static return values and/or logical errors
+    ✔ Foo
+    ✖ Bar
+    ? Baz please check manually for static return values and/or logical errors
   C.+: 0/2 points
-    ✖ C > Foo: failed
-    ✖ C > Bar: failed
-    ✖ C > Baz: failed
+    ✖ Foo
+    ✖ Bar
+    ✖ Baz
   D.+: 1/1.5 points
-    ✔ D > Foo: ok
-    ✖ D > Bar: failed
-    ✔ D > Baz: ok
+    ✔ Foo
+    ✖ Bar
+    ✔ Baz
   E.+: 0.5/2 points
-    ✔ E > Foo: ok
-    ✖ E > MorePoints: failed
-    ✖ E > Bar: failed
-    ✔ E > Baz: ok
+    ✔ Foo
+    ✖ MorePoints
+    ✖ Bar
+    ✔ Baz
   F.+: 2/2 points
-    ✔ F > Foo: ok
-    ✔ F > Bar: ok
+    ✔ Foo
+    ✔ Bar
 
 Info: The detailed test and error information is visible above the result summary.
 

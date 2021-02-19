@@ -3,11 +3,11 @@
 
 Summary:
   A.+: 1/1 point
-    ✔ A > Foo: ok
+    ✔ Foo
   BGroup::foo: 1/1 point
-    ✔ B > Foo: ok
+    ✔ Foo
   Last group: 1/1 point
-    ✔ C > Foo: ok
+    ✔ Foo
 
 Info: The detailed test and error information is visible above the result summary.
 

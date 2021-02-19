@@ -25,7 +25,7 @@
       "maxPoints": 2,
       "tests": [
         {
-          "match": "E > MorePoints",
+          "match": "MorePoints",
           "points": 1
         }
       ]

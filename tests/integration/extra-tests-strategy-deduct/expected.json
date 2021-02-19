@@ -8,7 +8,7 @@
       "manualCheck": false,
       "tests": [
         {
-          "name": "A > Foo",
+          "name": "Foo",
           "points": 1,
           "maxPoints": 1,
           "successful": true,
@@ -16,7 +16,7 @@
           "manualCheck": false
         },
         {
-          "name": "A > Bar",
+          "name": "Bar",
           "points": 0,
           "maxPoints": 1,
           "successful": false,
@@ -24,7 +24,7 @@
           "manualCheck": false
         },
         {
-          "name": "A > Baz",
+          "name": "Baz",
           "points": 1,
           "maxPoints": 1,
           "successful": true,
@@ -41,7 +41,7 @@
       "manualCheck": true,
       "tests": [
         {
-          "name": "B > Foo",
+          "name": "Foo",
           "points": 1,
           "maxPoints": 1,
           "successful": true,
@@ -49,7 +49,7 @@
           "manualCheck": false
         },
         {
-          "name": "B > Bar",
+          "name": "Bar",
           "points": 0,
           "maxPoints": 1,
           "successful": false,
@@ -57,7 +57,7 @@
           "manualCheck": false
         },
         {
-          "name": "B > Baz",
+          "name": "Baz",
           "points": 1,
           "maxPoints": 1,
           "successful": true,
@@ -74,7 +74,7 @@
       "manualCheck": false,
       "tests": [
         {
-          "name": "C > Foo",
+          "name": "Foo",
           "points": 0,
           "maxPoints": 1,
           "successful": false,
@@ -82,7 +82,7 @@
           "manualCheck": false
         },
         {
-          "name": "C > Bar",
+          "name": "Bar",
           "points": 0,
           "maxPoints": 1,
           "successful": false,
@@ -90,7 +90,7 @@
           "manualCheck": false
         },
         {
-          "name": "C > Baz",
+          "name": "Baz",
           "points": 0,
           "maxPoints": 1,
           "successful": false,
@@ -107,7 +107,7 @@
       "manualCheck": false,
       "tests": [
         {
-          "name": "D > Foo",
+          "name": "Foo",
           "points": 0.5,
           "maxPoints": 0.5,
           "successful": true,
@@ -115,7 +115,7 @@
           "manualCheck": false
         },
         {
-          "name": "D > Bar",
+          "name": "Bar",
           "points": 0,
           "maxPoints": 0.5,
           "successful": false,
@@ -123,7 +123,7 @@
           "manualCheck": false
         },
         {
-          "name": "D > Baz",
+          "name": "Baz",
           "points": 0.5,
           "maxPoints": 0.5,
           "successful": true,
@@ -140,7 +140,7 @@
       "manualCheck": false,
       "tests": [
         {
-          "name": "E > Foo",
+          "name": "Foo",
           "points": 0.5,
           "maxPoints": 0.5,
           "successful": true,
@@ -148,7 +148,7 @@
           "manualCheck": false
         },
         {
-          "name": "E > MorePoints",
+          "name": "MorePoints",
           "points": 0,
           "maxPoints": 1,
           "successful": false,
@@ -156,7 +156,7 @@
           "manualCheck": false
         },
         {
-          "name": "E > Bar",
+          "name": "Bar",
           "points": 0,
           "maxPoints": 0.5,
           "successful": false,
@@ -164,7 +164,7 @@
           "manualCheck": false
         },
         {
-          "name": "E > Baz",
+          "name": "Baz",
           "points": 0.5,
           "maxPoints": 0.5,
           "successful": true,
@@ -181,7 +181,7 @@
       "manualCheck": false,
       "tests": [
         {
-          "name": "F > Foo",
+          "name": "Foo",
           "points": 1,
           "maxPoints": 1,
           "successful": true,
@@ -189,7 +189,7 @@
           "manualCheck": false
         },
         {
-          "name": "F > Bar",
+          "name": "Bar",
           "points": 1,
           "maxPoints": 1,
           "successful": true,

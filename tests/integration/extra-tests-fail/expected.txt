@@ -4,37 +4,37 @@ FAILED TESTS:
   B > Baz
     AssertionError: expected true to equal false
         at Context.<anonymous> (tests/b.test.js:13:21)
-    
+
   extra > B > Baz
     AssertionError: expected true to equal false
         at Context.<anonymous> (tests/extra/b.test.js:14:23)
-    
+
   Extra > D > Foo
     AssertionError: expected true to equal false
         at Context.<anonymous> (tests/extra/d.test.js:6:23)
-    
+
   extra > E > Foo
     AssertionError: expected true to equal false
         at Context.<anonymous> (tests/extra/e.test.js:6:23)
-    
+
 
 ------------       RESULT       ------------
 
 Summary:
   A.+: 1/1 point
-    ✔ A > Foo: ok
+    ✔ Foo
   B.+: 2/3 points
-    ✔ B > Foo: ok
-    ✔ B > Bar: ok
-    ✖ B > Baz: failed
+    ✔ Foo
+    ✔ Bar
+    ✖ Baz
   C.+: 2/2 points
-    ✔ C > Foo: ok
-    ✔ C > Bar: ok
+    ✔ Foo
+    ✔ Bar
   D.+: 1/1 point [manual check required]
-    ? D > Foo: WARNING: please check manually for static return values and/or logical errors
+    ? Foo please check manually for static return values and/or logical errors
   E.+: 2/2 points [manual check required]
-    ? E > Foo: WARNING: please check manually for static return values and/or logical errors
-    ✔ E > Bar: ok
+    ? Foo please check manually for static return values and/or logical errors
+    ✔ Bar
 
 Info: The detailed test and error information is visible above the result summary.
 

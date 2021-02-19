@@ -8,7 +8,7 @@
       "manualCheck": false,
       "tests": [
         {
-          "name": "A > Foo",
+          "name": "Foo",
           "points": 1,
           "maxPoints": 1,
           "successful": true,
@@ -16,7 +16,7 @@
           "manualCheck": false
         },
         {
-          "name": "A > Bar",
+          "name": "Bar",
           "points": 0,
           "maxPoints": 1,
           "successful": false,

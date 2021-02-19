@@ -49,7 +49,7 @@ const printTestFailures = (formatError: any, results?: KarmaResult[]) => {
     console.error(`  ${concatTestName(result, true)}`);
     if (result.log && Array.isArray(result.log)) {
       result.log.forEach((log) => {
-        console.error(`    ${chalk.red(formatError(log).split('\n').join('\n    '))}`);
+        console.error(`    ${chalk.red(formatError(log).trim().split('\n').join('\n    '))}\n`);
       });
     }
   });
@@ -68,7 +68,6 @@ const Reporter = (json: boolean) => {
     const testRun: Record<string, TestRun> = {};
     const errors: Record<string, boolean> = {};
     const testFailures: Record<string, KarmaResult[]> = {};
-    const logs: Record<string, string[]> = {};
 
     // create a new test run for each browser
     this.onBrowserStart = function onBrowserStart(browser) {
@@ -77,7 +76,12 @@ const Reporter = (json: boolean) => {
 
     // save single test result
     this.onSpecComplete = function onSpecComplete(browser: Browser, result: KarmaResult) {
-      testRun[browser.id].recordTest(concatTestName(result), isExtraTest(result), result.success);
+      testRun[browser.id].recordTest(
+        concatTestName(result),
+        result.description,
+        isExtraTest(result),
+        result.success,
+      );
 
       // display error messages
       if (!result.success) {
@@ -87,15 +91,6 @@ const Reporter = (json: boolean) => {
 
         testFailures[browser.id].push(result);
       }
-
-      // display console logs
-      if (logs[browser.id] && logs[browser.id].length > 0 && !json) {
-        console.error();
-        console.error(concatTestName(result, true));
-        logs[browser.id].forEach((log) => console.error(`  ${log.split('\n').join('\n  ')}`));
-      }
-
-      delete logs[browser.id];
     };
 
     // handle browser errors that do not allow execution of further tests
@@ -115,12 +110,10 @@ const Reporter = (json: boolean) => {
 
     // forward console.log statements
     this.onBrowserLog = (browser, log, type) => {
-      if (!logs[browser.id]) {
-        logs[browser.id] = [];
+      if (!json) {
+        const message = typeof log === 'string' ? log : util.inspect(log, false, undefined, true);
+        console.error(`[console.${type.toLowerCase()}] ${message.split('\n').join('\n  ')}`);
       }
-
-      const message = typeof log === 'string' ? log : util.inspect(log, false, undefined, true);
-      logs[browser.id].push(`console.${type.toLowerCase()}: ${message}`);
     };
 
     // print result when all tests have been executed
@@ -131,7 +124,7 @@ const Reporter = (json: boolean) => {
       }
 
       if (json) {
-        console.log(JSON.stringify(testRun[browser.id], undefined, 2));
+        console.log(`\n${JSON.stringify(testRun[browser.id], undefined, 2)}`);
       } else {
         printTestFailures(formatError, testFailures[browser.id]);
         console.log();

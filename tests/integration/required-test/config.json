@@ -5,7 +5,7 @@
       "match": "A.+",
       "tests": [
         {
-          "match": "A > Required",
+          "match": "Required",
           "required": true
         }
       ]
@@ -16,7 +16,7 @@
       "maxPoints": 2,
       "tests": [
         {
-          "match": "B > Required",
+          "match": "Required",
           "required": true
         }
       ]
@@ -25,7 +25,7 @@
       "match": "C.+",
       "tests": [
         {
-          "match": "C > Required",
+          "match": "Required",
           "required": true
         }
       ]

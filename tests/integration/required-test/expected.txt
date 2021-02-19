@@ -4,30 +4,30 @@ FAILED TESTS:
   A > Bar
     AssertionError: expected true to equal false
         at Context.<anonymous> (tests/a.test.js:9:21)
-    
+
   A > Required
     AssertionError: expected true to equal false
         at Context.<anonymous> (tests/a.test.js:16:21)
-    
+
   B > Required
     AssertionError: expected true to equal false
         at Context.<anonymous> (tests/b.test.js:16:21)
-    
+
 
 ------------       RESULT       ------------
 
 Summary:
   A.+: 0/3 points
-    ✔ A > Foo: ok
-    ✖ A > Bar: failed
-    ✖ A > Required: failed
+    ✔ Foo
+    ✖ Bar
+    ✖ Required
   B.+: 0/2 points
-    ✔ B > Foo: ok
-    ✔ B > Bar: ok
-    ✖ B > Required: failed
+    ✔ Foo
+    ✔ Bar
+    ✖ Required
   C.+: 2/2 points
-    ✔ C > Foo: ok
-    ✔ C > Required: ok
+    ✔ Foo
+    ✔ Required
 
 Info: The detailed test and error information is visible above the result summary.
 

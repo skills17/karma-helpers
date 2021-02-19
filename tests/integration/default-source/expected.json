@@ -8,7 +8,7 @@
       "manualCheck": false,
       "tests": [
         {
-          "name": "Hello > World",
+          "name": "World",
           "points": 1,
           "maxPoints": 1,
           "successful": true,
