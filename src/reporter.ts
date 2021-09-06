@@ -97,7 +97,7 @@ const Reporter = (json: boolean) => {
 
     const testRun: Record<string, TestRun> = {};
     const errors: Record<string, boolean> = {};
-    const testFailures: Record<string, KarmaResult[]> = {};
+    let testFailures: Record<string, KarmaResult[]> = {};
 
     // create a new test run for each browser
     this.onBrowserStart = function onBrowserStart(browser) {
@@ -157,6 +157,7 @@ const Reporter = (json: boolean) => {
         console.log(`\n${JSON.stringify(testRun[browser.id], undefined, 2)}`);
       } else {
         printTestFailures(formatError, testFailures[browser.id]);
+        testFailures = {};
         console.log();
 
         const printer = new Printer(testRun[browser.id]);
