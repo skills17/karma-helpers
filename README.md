@@ -16,7 +16,7 @@ This package provides some Karma helpers for usage in a skills competition envir
 ## Installation
 
 **Requirements:**
-- Node `14` or greater
+- Node `16` or greater
 - Karma `5.0` or greater
 
 Karma already needs to be installed with a compatible testing framework (like mocha).
