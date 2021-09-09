@@ -1,5 +1,7 @@
 import TaskConfig from '@skills17/task-config';
 
+process.env.CHROME_BIN = require('puppeteer').executablePath();
+
 export default ({ plugins = [], ...overrides }: Record<string, any> = {}): Record<string, any> =>
   (config: any) => {
     const task = new TaskConfig();

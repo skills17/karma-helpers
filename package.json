@@ -62,6 +62,7 @@
     "uniqid": "^5.3.0"
   },
   "peerDependencies": {
-    "karma": "^5.0.0 || ^6.0.0"
+    "karma": "^5.0.0 || ^6.0.0",
+    "puppeteer": "*"
   }
 }
