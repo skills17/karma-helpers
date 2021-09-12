@@ -161,7 +161,7 @@ const Reporter = (json: boolean) => {
         console.log();
 
         const printer = new Printer(testRun[browser.id]);
-        printer.print();
+        printer.print({ printPoints: config.arePointsShown() });
       }
 
       if (config.isLocalHistoryEnabled()) {

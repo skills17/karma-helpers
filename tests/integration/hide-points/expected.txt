@@ -1,0 +1,20 @@
+
+FAILED TESTS:
+
+  B > Baz
+    AssertionError: expected true to equal false
+        at Context.<anonymous> (tests/b.test.js:13:21)
+
+
+------------       RESULT       ------------
+
+Summary:
+  A.+
+    ✔ Foo
+  B.+
+    ✔ Foo
+    ✔ Bar
+    ✖ Baz
+
+Info: The detailed test and error information is visible above the result summary.
+
