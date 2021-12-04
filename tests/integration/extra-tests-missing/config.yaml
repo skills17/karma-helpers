@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://schema.skills17.ch/task-config/v3/config.schema.json
+id: extra-tests-missing
+source: []
+groups:
+- match: A.+
+- match: B.+
+- match: C.+
+- match: D.+
+- match: E.+
+- match: F.+

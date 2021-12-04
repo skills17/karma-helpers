@@ -1,0 +1,7 @@
+# yaml-language-server: $schema=https://schema.skills17.ch/task-config/v3/config.schema.json
+id: hide-points
+source: []
+displayPoints: false
+groups:
+- match: A.+
+- match: B.+

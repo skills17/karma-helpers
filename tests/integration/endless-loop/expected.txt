@@ -1,3 +1,2 @@
-31 01 2021 11:47:47.148:WARN [Chrome Headless 87.0.4280.141 (Linux x86_64)]: Disconnected (0 times) , because no message in 10000 ms.
 31 01 2021 11:47:47.151:ERROR [skills17]: An unexpected error has occurred and tests cannot be executed.
 Disconnected , because no message in 10000 ms.

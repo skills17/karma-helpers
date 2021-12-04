@@ -11,13 +11,11 @@ export default ({ plugins = [], ...overrides }: Record<string, any> = {}): Recor
       browsers: ['ChromeHeadless'],
       files: [...task.getSource(), ...task.getTests()],
       hostname:
-        !task.getServe().bind ||
-        task.getServe().bind === '127.0.0.1' ||
-        task.getServe().bind === '0.0.0.0'
+        !task.getServe().bind || task.getServe().bind === '127.0.0.1'
           ? 'localhost'
           : task.getServe().bind,
-      listenAddress: task.getServe().bind ?? '0.0.0.0',
-      logLevel: config.LOG_WARN,
+      listenAddress: task.getServe().bind ?? '127.0.0.1',
+      logLevel: config.LOG_ERROR,
       plugins: [...plugins, require('./reporter')], // eslint-disable-line global-require
       reporters: ['skills17'],
       singleRun: true,

@@ -1,0 +1,7 @@
+# yaml-language-server: $schema=https://schema.skills17.ch/task-config/v3/config.schema.json
+id: syntax-error
+source:
+- ./src/**/*.js
+groups:
+- match: A.+
+- match: SyntaxError.+

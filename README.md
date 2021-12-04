@@ -42,9 +42,9 @@ This will provide the following commands:
 
 ## Usage
 
-A `config.json` file needs to be created that contains some information about the task. It should be placed in the root folder of your task, next to the `package.json` file.
+A `config.yaml` file needs to be created that contains some information about the task. It should be placed in the root folder of your task, next to the `package.json` file.
 
-See the [`@skills17/task-config`](https://github.com/skills17/task-config#configuration) package for a detailed description of all available properties in the `config.json` file.
+See the [`@skills17/task-config`](https://github.com/skills17/task-config#configuration) package for a detailed description of all available properties in the `config.yaml` file.
 
 If the test files in your tasks do not match the default file pattern (`./tests/**/*.@(spec|test).@(js|ts)`), the [`tests` setting](https://github.com/skills17/task-config#tests-string) needs to be overwritten.
 
@@ -63,13 +63,13 @@ module.exports = config({
 ```
 
 If a different testing framework than mocha with chai is used, modify the `frameworks` and `plugins` list.
-It is also possible to overwrite any other karma configuration value, but shouldn't be necessary usually as the `@skills17/karma-helpers` takes the correct values from the `config.json` file.
+It is also possible to overwrite any other karma configuration value, but shouldn't be necessary usually as the `@skills17/karma-helpers` takes the correct values from the `config.yaml` file.
 
 ### Grouping
 
 A core concept is test groups. You usually don't want to test everything for one criterion in one test function but instead split it into multiple ones for a cleaner test class and a better overview.
 
-In JS, tests are grouped by a test name prefix defined in the `config.json` file.
+In JS, tests are grouped by a test name prefix defined in the `config.yaml` file.
 
 All `describe`s are concatenated with the actual test names before evaluation.
 

@@ -1,0 +1,6 @@
+# yaml-language-server: $schema=https://schema.skills17.ch/task-config/v3/config.schema.json
+id: nested-describe
+source: []
+groups:
+- match: A > B.+
+- match: ".+D.+"

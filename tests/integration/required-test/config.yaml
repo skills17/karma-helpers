@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=https://schema.skills17.ch/task-config/v3/config.schema.json
+id: required-test
+source: []
+groups:
+- match: A.+
+  tests:
+  - match: Required
+    required: true
+- match: B.+
+  strategy: deduct
+  maxPoints: 2
+  tests:
+  - match: Required
+    required: true
+- match: C.+
+  tests:
+  - match: Required
+    required: true

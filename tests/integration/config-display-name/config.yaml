@@ -1,0 +1,9 @@
+# yaml-language-server: $schema=https://schema.skills17.ch/task-config/v3/config.schema.json
+id: config-display-name
+source: []
+groups:
+- match: A.+
+- match: B.+
+  displayName: BGroup::foo
+- match: C.+
+  displayName: Last group
