@@ -8,7 +8,25 @@ export default ({ plugins = [], ...overrides }: Record<string, any> = {}): Recor
     config.set({
       autoWatch: false,
       basePath: task.getProjectRoot(),
-      browsers: ['ChromeHeadless'],
+      browsers: ['ChromeHeadlessSkills17'],
+      customLaunchers: {
+        ChromeHeadlessSkills17: {
+          base: 'ChromeHeadless',
+          flags:
+            process.env.AWS_LAMBDA === '1'
+              ? [
+                  '--headless',
+                  '--no-sandbox',
+                  '--no-zygote',
+                  '--disable-setuid-sandbox',
+                  '--disable-web-security',
+                  '--disable-gpu',
+                  '--disable-software-rasterizer',
+                  '--disable-dev-shm-usage',
+                ]
+              : [],
+        },
+      },
       files: [...task.getSource(), ...task.getTests()],
       hostname:
         !task.getServe().bind || task.getServe().bind === '127.0.0.1'
